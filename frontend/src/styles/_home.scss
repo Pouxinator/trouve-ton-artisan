@@ -1,0 +1,54 @@
+.home-hero {
+  padding: 5rem 0;
+  background:
+    linear-gradient(135deg, rgba(0, 116, 199, 0.95), rgba(0, 73, 124, 0.95)),
+    #0074c7;
+  color: #ffffff;
+  text-align: center;
+
+  &__content {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  &__badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    background-color: rgba(255, 255, 255, 0.18);
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    color: #ffffff;
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+  }
+
+  p {
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    font-size: 1.15rem;
+  }
+
+  &__search {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+
+  span {
+    display: inline-block;
+    color: #0074c7;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "aos": "^2.3.4",
+    "axios": "latest",
+    "bootstrap-icons": "^1.13.1",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-helmet-async": "^3.0.0",
+    "react-router-dom": "latest",
+    "vite": "latest"
+  }
+}

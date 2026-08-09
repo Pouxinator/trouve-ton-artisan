@@ -1,0 +1,58 @@
+.artisans-page {
+  &__hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #f1f8fc, #ffffff);
+
+    span {
+      display: inline-block;
+      color: #0074c7;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      color: #00497c;
+    }
+
+    p {
+      max-width: 650px;
+      margin: 0;
+      color: #384050;
+      font-size: 1.1rem;
+    }
+  }
+
+  &__count {
+    margin-bottom: 1.5rem;
+    color: #384050;
+    font-weight: 700;
+  }
+
+  &__status {
+    padding: 2rem;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 26px rgba(56, 64, 80, 0.1);
+    font-weight: 700;
+  }
+
+  &__empty {
+    padding: 3rem;
+    border-radius: 22px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 10px 26px rgba(56, 64, 80, 0.1);
+
+    h2 {
+      margin-bottom: 0.75rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

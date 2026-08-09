@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: $light;
+  color: $dark;
+}
+
+main {
+  min-height: 70vh;
+}
+
+h1, h2, h3 {
+  color: $dark-blue;
+  font-weight: 700;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.btn-primary {
+  background-color: $primary-blue;
+  border-color: $primary-blue;
+
+  &:hover {
+    background-color: $dark-blue;
+    border-color: $dark-blue;
+  }
+}

@@ -1,0 +1,48 @@
+CREATE DATABASE IF NOT EXISTS trouve_ton_artisan
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE trouve_ton_artisan;
+
+CREATE TABLE IF NOT EXISTS categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS specialties (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    category_id INT NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_specialties_category
+        FOREIGN KEY (category_id)
+        REFERENCES categories(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    CONSTRAINT unique_specialty_category UNIQUE (name, category_id)
+);
+
+CREATE TABLE IF NOT EXISTS artisans (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    note DECIMAL(2,1) NOT NULL,
+    city VARCHAR(100) NOT NULL,
+    about TEXT,
+    email VARCHAR(150) NOT NULL,
+    website VARCHAR(255),
+    is_top BOOLEAN NOT NULL DEFAULT FALSE,
+    specialty_id INT NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_artisans_specialty
+        FOREIGN KEY (specialty_id)
+        REFERENCES specialties(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);

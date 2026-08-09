@@ -1,0 +1,47 @@
+.not-found {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+
+  &__content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background: #ffffff;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 14px 40px rgba(56, 64, 80, 0.14);
+  }
+
+  &__badge {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: #f1f8fc;
+    color: #cd2c2e;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    margin-bottom: 1rem;
+    color: #00497c;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    color: #384050;
+    font-size: 1.1rem;
+  }
+}
+
+.not-found__image {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  max-height: 240px;
+  margin: 1.5rem auto;
+  object-fit: contain;
+}

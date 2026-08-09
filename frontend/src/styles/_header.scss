@@ -1,0 +1,140 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(56, 64, 80, 0.1);
+  box-shadow: 0 4px 18px rgba(56, 64, 80, 0.08);
+
+  .navbar {
+    min-height: 88px;
+    padding: 1rem 0;
+  }
+
+  .container {
+    max-width: 1400px;
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 220px;
+
+    color: #384050;
+    font-size: 1.4rem;
+    font-weight: 800;
+    line-height: 1.1;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #0074c7;
+    }
+
+    span {
+      display: block;
+    }
+
+    small {
+      display: block;
+
+      margin-top: 0.3rem;
+
+      color: #0074c7;
+      font-size: 0.78rem;
+      font-weight: 700;
+    }
+  }
+
+  .navbar-collapse {
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .navbar-nav {
+    gap: 0.25rem;
+  }
+
+  .nav-link {
+    padding: 0.6rem 0.9rem;
+
+    color: #384050;
+
+    font-size: 0.95rem;
+    font-weight: 600;
+
+    border-radius: 999px;
+
+    white-space: nowrap;
+
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+
+    &:hover,
+    &.active {
+      color: #ffffff;
+      background-color: #0074c7;
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+
+    min-width: 360px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .site-header {
+    .container {
+      max-width: 1140px;
+    }
+
+    &__brand {
+      min-width: 190px;
+      font-size: 1.25rem;
+    }
+
+    .nav-link {
+      padding: 0.5rem 0.65rem;
+      font-size: 0.9rem;
+    }
+
+    &__search {
+      min-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .site-header {
+    .navbar {
+      min-height: 72px;
+      padding: 0.75rem 0;
+    }
+
+    .navbar-collapse {
+      padding-top: 1rem;
+    }
+
+    .navbar-nav {
+      gap: 0.4rem;
+    }
+
+    .nav-link {
+      display: inline-block;
+    }
+
+    &__search {
+      width: 100%;
+      min-width: unset;
+      margin-top: 0.8rem;
+    }
+  }
+}
