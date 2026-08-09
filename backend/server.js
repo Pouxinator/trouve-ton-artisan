@@ -3,25 +3,21 @@ require("dotenv").config();
 const app = require("./app");
 const sequelize = require("./config/database");
 
-
 require("./models");
 
 const PORT = process.env.PORT || 3000;
 
 sequelize
-    .authenticate()
-    .then(async () => {
+  .authenticate()
+  .then(async () => {
+    console.log("Connexion MySQL réussie.");
 
-        console.log("Connexion MySQL réussie.");
+    await sequelize.sync({ alter: false });
 
-
-        await sequelize.sync({ alter: false });
-
-        app.listen(PORT, () => {
-            console.log(`Serveur lancé sur http://localhost:${PORT}`);
-        });
-
-    })
-    .catch((err) => {
-        console.error(err);
+    app.listen(PORT, () => {
+      console.log(`Serveur lancé sur le port ${PORT}.`);
     });
+  })
+  .catch((err) => {
+    console.error("Erreur de connexion MySQL :", err);
+  });
